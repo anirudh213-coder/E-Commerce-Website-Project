@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#"><img src="img/logo.png" alt="Website logo"></a></div>
+        </div>
+
+        <div id="mobile">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-bars" id="bar"></i>
+        </div>
+
+        <ul class="nav-items" id="nav-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" >Shop</a></li>
+            <li><a href="blog.html" >Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+            <li><a href="cart.html"class="active"><i class="fa-solid fa-bag-shopping" id="lg-bag"></i></a></li>
+            <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+    </nav>
+
+    <div id="page-header" class="about-header">
+
+        <h2>#let's_talk</h2>
+
+        <p>Read all case studies about our products</p>
+
+    </div>
+
+    <div id="cart" class="PPD">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href=""><i class="fa-solid fa-circle-xmark"></i></a></td>
+                    <td><img src="img/P1.jpg" alt=""></td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>$ 119.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$ 119.00</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="fa-solid fa-circle-xmark"></i></a></td>
+                    <td><img src="img/p2.jpg" alt=""></td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>$119.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$119.00</td>
+                </tr>
+                <tr>
+                    <td><a href=""><i class="fa-solid fa-circle-xmark"></i></a></td>
+                    <td><img src="img/p3.jpg" alt=""></td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td>$119.00</td>
+                    <td><input type="number" value="1"></td>
+                    <td>$119.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="cart-add" class="PPD">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Total</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>$ 335</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>$ 335</strong></td>
+                </tr>
+            </table>
+
+            <button class="normal">Checkout</button>
+        </div>
+
+
+    </div>
+
+    <div class="PPD" id="footer">
+        <div class="col">
+            <img src="img/logo.png" alt="Website logo" class="logo">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 123 Serenity Avenue, Greenfield, TX 75402, USA</p>
+            <p><strong>Phone:</strong> +1 (555) 987-6543 , +1 (555) 987-6543</p>
+            <p><strong>Business Hours:</strong> Monday–Friday: 9:00 AM to 6:00 PM </p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="img/app.jpg" alt="apple app store logo">
+                <img src="img/play.jpg" alt="google play store logo">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay.png" alt="payment logos">
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 Anirudh | E-Commerce Website. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const cartTable = document.querySelector("tbody");
+    const cartTotal = document.querySelector("#subtotal strong");
+
+    function updateCartTotal() {
+        let cartSubtotal = 0;
+        cartTable.querySelectorAll("tr").forEach(row => {
+            const price = parseFloat(row.querySelector("td:nth-child(4)").innerText.replace("$", ""));
+            const quantity = parseInt(row.querySelector("td:nth-child(5) input").value);
+            const subtotal = price * quantity;
+            row.querySelector("td:nth-child(6)").innerText = `$${subtotal.toFixed(2)}`;
+            cartSubtotal += subtotal;
+        });
+        document.querySelector("#subtotal tr:nth-child(1) td:nth-child(2)").innerText = `$${cartSubtotal.toFixed(2)}`;
+        updateCartTotalWithShipping(cartSubtotal);
+    }
+
+    function updateCartTotalWithShipping(cartSubtotal) {
+        const shippingCost = cartSubtotal >= 300 ? "Free" : "$10";
+        document.querySelector("#subtotal tr:nth-child(2) td:nth-child(2)").innerText = shippingCost;
+
+        let finalTotal = cartSubtotal;
+        if (shippingCost !== "Free") {
+            finalTotal += 10;
+        }
+        document.querySelector("#subtotal tr:nth-child(3) td:nth-child(2)").innerText = `$${finalTotal.toFixed(2)}`;
+    }
+
+    cartTable.addEventListener("input", (event) => {
+        if (event.target.tagName === "INPUT" && event.target.type === "number") {
+            updateCartTotal();
+        }
+    });
+
+    cartTable.addEventListener("click", (event) => {
+        if (event.target.classList.contains("fa-circle-xmark")) {
+            event.target.closest("tr").remove();
+            updateCartTotal();
+        }
+    });
+
+    updateCartTotal();
+});
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
